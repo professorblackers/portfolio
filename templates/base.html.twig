@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Rob Blackburn - Web & CRM Developer{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<header>
+    <ul class="nav">
+        <li><a href="#home">Home</a></li>
+    </ul>
+
+    <div class="right-nav">
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+</header>
+
+<section class="home" id="home">
+    <div class="home-text" data-aos="zoom-in-up">
+        <h1><span>Rob Blackburn</span> <br> Web & CRM Developer</h1>
+        <ul class="count">
+            <li><span>7+</span> Years of <br> experience</li>
+            <li>
+                <a href="https://www.linkedin.com/in/robert-blackburn-253981125/" target="_blank">
+                    <span>
+                        <i class='bx bxl-linkedin-square'></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/professorblackers" target="_blank">
+                    <span>
+                        <i class='bx bxl-github'></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script src="{{ asset('/asset/js/script.js') }}"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 250,
+        duration: 1400,
+    });
+</script>
+
+</body>
 </html>
