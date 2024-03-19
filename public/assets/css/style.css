@@ -302,10 +302,10 @@ header.sticky{
 	transform: scale(1.1);
 }
 
-.testimonial{
+.clients{
 	background: var(--second-bg-color);
 }
-.testimonial-content{
+.clients-content{
 	margin-top: 5rem;
 	display: flex;
 	align-items: center;
@@ -418,6 +418,36 @@ form textarea{
 	text-align: center;
 	font-size: var(--p-font);
 	font-weight: 400;
+}
+
+.logo-scroll-container {
+	overflow-x: hidden; /* Hide overflow */
+	white-space: nowrap; /* Prevent logos from wrapping */
+	padding: 10px 0; /* Add some padding */
+	width: 100%; /* Full width */
+}
+
+.logo-items {
+	display: inline-block; /* Display logos inline */
+	animation: scrollRightToLeft 20s linear infinite; /* Animation for scrolling */
+}
+
+.logo-item {
+	display: inline-block; /* Display logos inline */
+	margin-right: 20px; /* Add space between logos */
+}
+
+.logo-item img {
+	max-height: 50px; /* Set maximum height for logos */
+}
+
+@keyframes scrollRightToLeft {
+	0% {
+		transform: translateX(100%); /* Initial position, start from right */
+	}
+	100% {
+		transform: translateX(-100%); /* End position, move to left */
+	}
 }
 
 @media (max-width: 1650px){
