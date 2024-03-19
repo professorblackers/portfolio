@@ -115,6 +115,12 @@
     </div>
 </section>
 
+<div class="footer">
+    <p>© Rob Blackburn <span id="year"></span>.<br> Credits: Initial template provided by <a href="https://www.buymeacoffee.com/tahmidahmed">Tahmid Ahmed</a>. All rights reserved.</p>
+</div>
+
+
+
 <script src="{{ asset('/assets/js/script.js') }}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -123,6 +129,8 @@
         duration: 1400,
     });
 </script>
-
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 </body>
 </html>
