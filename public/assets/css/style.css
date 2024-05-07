@@ -305,23 +305,7 @@ header.sticky{
 .clients{
 	background: var(--second-bg-color);
 }
-.clients-content{
-	margin-top: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-.row img{
-	width: 100%;
-	height: 130px;
-	max-width: 130px;
-	object-fit: cover;
-	border-radius: 50%;
-	border: 2px solid var(--main-color);
-	margin-bottom: 30px;
-	transition: all .50s ease;
-}
+
 .row p{
 	width: 100%;
 	max-width: 700px;
@@ -420,34 +404,17 @@ form textarea{
 	font-weight: 400;
 }
 
-.logo-scroll-container {
-	overflow-x: hidden; /* Hide overflow */
-	white-space: nowrap; /* Prevent logos from wrapping */
-	padding: 10px 0; /* Add some padding */
-	width: 100%; /* Full width */
+#logo-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two columns */
+	grid-gap: 20px; /* Adjust spacing between logos */
+	margin-top: 50px;
 }
 
-.logo-items {
-	display: inline-block; /* Display logos inline */
-	animation: scrollRightToLeft 20s linear infinite; /* Animation for scrolling */
-}
-
-.logo-item {
-	display: inline-block; /* Display logos inline */
-	margin-right: 20px; /* Add space between logos */
-}
-
-.logo-item img {
-	max-height: 50px; /* Set maximum height for logos */
-}
-
-@keyframes scrollRightToLeft {
-	0% {
-		transform: translateX(100%); /* Initial position, start from right */
-	}
-	100% {
-		transform: translateX(-100%); /* End position, move to left */
-	}
+.client-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media (max-width: 1650px){
