@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Rob Blackburn - Web & CRM Developer{% endblock %}</title>
+    <link rel="icon" href="{% block icon %}{{ asset('/assets/img/favicon.ico') }}{% endblock %}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/style.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,15 +15,10 @@
 <body>
 
 <header>
-    <a href="#" class="logo">
-        Welcome!
-    </a>
-
     <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#clients">Clients</a></li>
+        <li><a href="{{ path('home') }}">Home</a></li>
+        <li><a href="{{ path('about') }}">About</a></li>
+        <li><a href="{{ path('portfolio') }}">Portfolio</a></li>
     </ul>
 
     <div class="right-nav">
@@ -30,82 +26,9 @@
     </div>
 </header>
 
-<section class="home" id="home">
-    <div class="home-text" data-aos="zoom-in-up">
-        <h1><span>Rob Blackburn</span> <br> Web & CRM Developer</h1>
-        <ul class="count">
-            <li><span>7+</span> Years of <br> experience</li>
-            <li>
-                <a href="https://www.linkedin.com/in/robert-blackburn-253981125/" target="_blank">
-                    <span>
-                        <i class='bx bxl-linkedin-square'></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/professorblackers" target="_blank">
-                    <span>
-                        <i class='bx bxl-github'></i>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+{% block body %}
 
-<section class="about" id="about">
-    <div class="about-text" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Hello! My name is Rob Blackburn. I am a Web & CRM developer, who brings passion, dedication and commitment to every aspect of my work. With 7+ years experience in this space, I enjoy turning problems into comprehensive solutions. My aim is to use my skills and resources to deliver user-friendly, scalable solutions across my areas of specialty.</p>
-    </div>
-</section>
-
-<section class="services" id="services">
-    <div class="middle-text" data-aos="fade-down">
-        <h2>My Services</h2>
-    </div>
-
-    <div class="services-content" data-aos="zoom-in-up">
-        <div class="col">
-            <h3>01</h3>
-            <h4>CRM Lifecycles</h4>
-            <p>Creation of a full suite of automated customer lifecycle journeys to cover conversion, retention, churn prevention and reactivation. This includes configuration of the automation within your CRM platform and creation of emails.</p>
-        </div>
-
-        <div class="col">
-            <h3>02</h3>
-            <h4>CRM Tactical</h4>
-            <p>Creation of tactical email marketing campaigns across different brands, products etc. This includes configuration of the target groups within your CRM platform and creation of emails and reusable email templates.</p>
-        </div>
-
-        <div class="col">
-            <h3>03</h3>
-            <h4>Web Development</h4>
-            <p>Design and development of comprehensive web solutions tailored to meet your business objectives and enhance online presence. The service encompasses the entire spectrum of web development across both front and back end.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="clients" id="clients">
-    <div class="middle-text" data-aos="fade-down">
-        <h2>Clients</h2>
-        <h3 style="margin-top:10px">I have worked with a number of clients within the online and retail gambling industry on their CRM systems and strategies. These include:</h3>
-    </div>
-
-    <div id="logo-grid">
-        <div class="client-logo"><img src="{{ asset('/assets/img/MerkurSlots.webp') }}" alt="Merkur Slots"></div>
-        <div class="client-logo"><img src="{{ asset('/assets/img/MerkurCasino.webp') }}" alt="Merkur Casino"></div>
-        <div class="client-logo"><img src="{{ asset('/assets/img/MeccaBingo.svg') }}" alt="Mecca Bingo" style="width: 60%;"></div>
-        <div class="client-logo"><img src="{{ asset('/assets/img/GrosvenorCasinos.svg') }}" alt="Grosvenor Casinos" style="width: 20%;"></div>
-        <div class="client-logo"><img src="{{ asset('/assets/img/LanceBetting.png') }}" alt="Lance Betting" style="width: 60%;"></div>
-        <div class="client-logo"><img src="{{ asset('/assets/img/BuzzBingo.png') }}" alt="Buzz Bingo" style="width: 30%;"></div>
-    </div>
-</section>
-
-<div class="footer">
-    <p>© Rob Blackburn <span id="year"></span>.<br> Credits: Initial template provided by <a href="https://www.buymeacoffee.com/tahmidahmed">Tahmid Ahmed</a>. All rights reserved.</p>
-</div>
+{% endblock %}
 
 <script src="{{ asset('/assets/js/script.js') }}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
